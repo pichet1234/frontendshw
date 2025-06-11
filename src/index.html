@@ -1,0 +1,59 @@
+<!doctype html>
+<!--
+
+Theme: NobleUI - Angular Admin Template
+Author: NobleUI
+Website: https://www.nobleui.com
+Portfolio: https://themeforest.net/user/nobleui/portfolio
+Contact: nobleui123@gmail.com
+Purchase: https://1.envato.market/nobleui_angular
+License: For each use, you must have a valid license purchased only from themeforest(the above link) in order to legally use the theme for your project.
+
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Smart Home WAM V - Care Central </title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="css/splash-screen.css">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  <!-- End fonts -->
+   <!-- google map -->
+     <script>
+    (g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})({
+      v: "weekly",
+      key: "AIzaSyD9bVW_naXXv4UzM3aeSw5SnwxRTg1PatU"
+    });
+  </script>
+  <!-- End google map -->
+</head>
+<body>
+
+  <!-- START: Setting up theme mode on page load for the splash screen -->
+  <script>
+    const themeMode = localStorage.getItem('theme');
+    if (themeMode) {
+      document.documentElement.setAttribute('data-bs-theme', themeMode);
+    } else {
+      document.documentElement.setAttribute('data-bs-theme', window.matchMedia('(prefers-color-scheme: dark)').matches? 'dark': 'light');
+    }
+  </script>
+  <!-- END: Setting up theme mode on page load for the splash screen -->
+
+  <app-root>
+    <!-- START: Splash screen -->
+    <div class="splash-screen">
+      <div class="logo"></div>
+      <div class="spinner"></div>
+    </div>
+    <!-- END: Splash screen -->
+  </app-root>
+
+</body>
+</html>

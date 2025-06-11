@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="card mt-4">
+        <div class="card-body">
+            <h2 class="card-title" style="font-size: 25px;">แบบประเมินโรคซึมเศร้า 9 คำถาม (9Q)</h2>
+            <form [formGroup]="form" (ngSubmit)="onSubmit()">
+                <div class="row" *ngFor="let q of [1,2,3,4,5,6,7,8,9]">
+                    <div class="col-md-12 mb-3">
+                        <label class="form-label" style="font-size: 18px;">
+                            {{ q }}. {{ getQuestionText(q) }}
+                        </label>
+                        <div class="form-check" *ngFor="let opt of options">
+                            <input type="radio" class="form-check-input" [value]="opt.value" [formControlName]="'q' + q"
+                                [name]="'q' + q">
+                            <label class="form-check-label" style="font-size: 18px;">{{ opt.label }}</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div *ngIf="submitted">
+                            <h3>ผลการประเมิน</h3>
+                            <div *ngIf="score > 0">
+                                <ngb-alert [dismissible]="false" [type]="'danger'">
+                                    {{ result }}
+                                </ngb-alert>
+                            </div>
+                            <div *ngIf="score == 0">
+                                <ngb-alert [dismissible]="false" [type]="'success'">
+                                    {{ result }}
+                                </ngb-alert>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary" [disabled]="form.invalid">ประเมิน</button>
+            </form>
+        </div>
+    </div>
+</div>

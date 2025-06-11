@@ -1,0 +1,65 @@
+<div class="container">
+  <div class="row w-100 mx-0 auth-page">
+    <div class="col-md-8 col-xl-8 mx-auto">
+      <div class="card">
+        <div class="row">
+          <div class="col-xl-4 pe-md-0">
+            <div class="auth-side-wrapper" [ngStyle]="{ 'background-image': 'url('+img+')' }">
+
+            </div>
+          </div>
+          <div class="col-md-8 ps-md-0">
+            <div class="auth-form-wrapper px-4 py-5">
+              <a routerLink="." class="nobleui-logo d-block mb-2">Smart Home WAM<span>&nbsp;V - Care </span>Central </a> 
+              <h5 class="text-secondary fw-normal mb-4">Create a account.</h5>
+              <form class="forms-sample" [formGroup]="form">
+                <div class="mb-3">
+                  <label for="exampleInputUsername1" class="form-label">Username</label>
+                  <input type="text" class="form-control" name="username" formControlName="username"
+                    autocomplete="Username" placeholder="Username" required>
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Password</label>
+                  <input type="password" class="form-control" name="password" formControlName="password"
+                    autocomplete="current-password" placeholder="Password" required>
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputUsername1" class="form-label">Full name</label>
+                  <input type="text" class="form-control" name="fullname" formControlName="fullname"
+                    autocomplete="Username" placeholder="fullname" required>
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">position</label>
+                  <input type="text" class="form-control" name="position" formControlName="position">
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Email address</label>
+                  <input type="email" class="form-control" name="email" formControlName="email" placeholder="Email" required>
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputUsername1" class="form-label">Tel.</label>
+                  <input type="text" class="form-control" name="tel" formControlName="tel"
+                    autocomplete="Username" placeholder="Username">
+                </div>
+                <div class="form-check mb-3">
+                  <input type="checkbox" class="form-check-input" id="authCheck">
+                  <label class="form-check-label" for="authCheck">
+                    Remember me
+                  </label>
+                </div>
+                <div>
+                  <button type="submit" class="btn btn-primary me-2 mb-2 mb-md-0" (click)="register()">Sign up</button>
+                  <button type="button" class="btn btn-outline-primary btn-icon-text mb-2 mb-md-0">
+                    <i class="feather icon-twitter btn-icon-prepend"></i>
+                    Sign up with twitter
+                  </button>
+                </div>
+                <a routerLink="/auth/login" class="d-block mt-3 text-secondary">Already a user? Sign in</a>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

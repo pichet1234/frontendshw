@@ -1,0 +1,78 @@
+<div class="container">
+    <div class="row w-100 mx-0 auth-page">
+        <div class="col-md-8 col-xl-12 mx-auto">
+        <div class="row">
+              <div class="col-md-12 stretch-card">
+                <div class="card">
+                  <div class="card-body">
+                    <h2 class="card-title">แบบคัดกรองโรคซึมเศร้า 2 คำถาม (2Q)</h2>
+                    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+                      <div class="row">
+                        <div class="col-sm-6">
+                          <div class="mb-3">
+                            <label class="form-label">1. ใน 2 สัปดาห์ที่ผ่านมา รู้สึกไม่สนใจหรือไม่อยากทำอะไรเลย?</label>
+                            <div class="form-check mb-2" *ngFor="let opt of options">
+                              <input type="radio" class="form-check-input" [value]="opt.value" formControlName="q1" name="q1">
+                              <label class="form-check-label" for="radioDefault">
+                                {{ opt.label }}
+                              </label>
+                            </div>
+                          </div>
+                        </div><!-- Col -->
+                      </div><!-- Row -->
+                      <div class="row">
+                        <div class="col-sm-6">
+                          <div class="mb-3">
+                            <label class="form-label">2. ใน 2 สัปดาห์ที่ผ่านมา รู้สึกหดหู่ เศร้าหมอง หรือสิ้นหวัง?</label>
+                            <div class="form-check mb-2" *ngFor="let opt of options">
+                              <input type="radio" class="form-check-input" [value]="opt.value" formControlName="q2" name="q2">
+                              <label class="form-check-label" for="radioDefault">
+                                {{ opt.label }}
+                              </label>
+                            </div>
+                          </div>
+                        </div><!-- Col -->
+                      </div><!-- Row -->
+                      <div class="row">
+                        <div class="col-sm-6">
+                          <div *ngIf="submitted">
+                            <h3>ผลการประเมิน</h3>
+                            <div *ngIf="score > 0">
+                              <ngb-alert [dismissible]="false" [type]="'danger'">
+                                {{ result }}
+                              </ngb-alert>
+                            </div>
+                            <div *ngIf="score == 0">
+                              <ngb-alert [dismissible]="false" [type]="'success'">
+                                {{ result }}
+                              </ngb-alert>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-xl-10 ">
+                          <div class="mb-3">
+                            <label for="exampleFormControlTextarea1" class="form-label">
+                              <h5 style="color: rgb(248, 3, 3);">การแปรผล</h5>
+                            </label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" disabled>
+                                 - ถ้าคำตอบ ไม่มี ทั้ง 2 คำถาม ถือ ว่า ปกติ ไม่เป็นโรคซึมเศร้า
+                                 - ถ้าคำตอบ มี ข้อใดข้อหนึ่งหรือทั้ง 2 ข้อ (มีอาการใดๆ ในคำถามที่ 1 และ 2 ) หมายถึง “เป็นผู้มีความเสี่ยง”
+                                   หรือ“มีแนวโน้มที่จะเป็นโรคซึมเศร้า” ให้ประเมินต่อด้วยแบบประเมิน โรคซึมเศร้า 9Q
+                              </textarea>
+                          </div>
+                        </div>
+                      </div>
+            
+                    </form>
+                    <button type="submit" class="btn btn-primary submit" (click)="onSubmit()" [disabled]="form.invalid">Submit
+                      form</button>
+                  </div>
+                </div>
+            
+              </div>
+        </div>
+        </div>
+    </div>
+</div>
