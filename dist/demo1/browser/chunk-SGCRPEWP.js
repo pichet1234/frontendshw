@@ -1,0 +1,1 @@
+import"./chunk-GAL4ENT6.js";var o=[{path:"",redirectTo:"redirto",pathMatch:"full"},{path:"redirto",loadComponent:()=>import("./chunk-VVFONQMM.js").then(t=>t.RedirtoComponent)},{path:"register",loadComponent:()=>import("./chunk-Z3HQAGTP.js").then(t=>t.RegisterComponent)}];export{o as default};

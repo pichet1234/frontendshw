@@ -1,0 +1,1 @@
+import"./chunk-GAL4ENT6.js";var o=[{path:"",redirectTo:"apexcharts",pathMatch:"full"},{path:"apexcharts",loadComponent:()=>import("./chunk-UDOJIS4P.js").then(t=>t.ApexchartsComponent)},{path:"chartjs",loadComponent:()=>import("./chunk-NREYOVV2.js").then(t=>t.ChartjsComponent)}];export{o as default};

@@ -1,0 +1,1 @@
+import{Sb as n,Tb as a,qc as r,ra as o,yc as m}from"./chunk-3TFDHLSU.js";import"./chunk-GAL4ENT6.js";var p=class t{static \u0275fac=function(e){return new(e||t)};static \u0275cmp=o({type:t,selectors:[["app-moderate"]],standalone:!0,features:[m],decls:2,vars:0,template:function(e,i){e&1&&(n(0,"p"),r(1,"moderate works!"),a())}})};export{p as ModerateComponent};

@@ -1,0 +1,1 @@
+import"./chunk-GAL4ENT6.js";var e=[{path:"",redirectTo:"feather",pathMatch:"full"},{path:"feather-icons",loadComponent:()=>import("./chunk-PDZWP6RL.js").then(t=>t.FeatherComponent)}];export{e as default};

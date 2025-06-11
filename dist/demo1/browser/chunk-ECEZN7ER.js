@@ -1,0 +1,1 @@
+import"./chunk-GAL4ENT6.js";var t=[{path:"",redirectTo:"profile",pathMatch:"full"},{path:"risk",loadComponent:()=>import("./chunk-X4LXVGXU.js").then(o=>o.RiskComponent)},{path:"moderate",loadComponent:()=>import("./chunk-LDAXCKX2.js")}];export{t as default};

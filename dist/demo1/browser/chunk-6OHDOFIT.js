@@ -1,0 +1,1 @@
+import"./chunk-GAL4ENT6.js";var a=[{path:"",redirectTo:"basic-tables",pathMatch:"full"},{path:"basic-tables",loadComponent:()=>import("./chunk-ZALXC2YT.js").then(t=>t.BasicTableComponent)},{path:"ngx-datatable",loadComponent:()=>import("./chunk-B2DPAXU4.js").then(t=>t.NgxDatatableComponent)}];export{a as default};
