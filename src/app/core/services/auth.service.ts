@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class AuthService {
 
-  private api = 'https://backend-project-m79o.onrender.com/';
+  private api = 'https://backend-project-m79o.onrender.com';
   constructor(private http: HttpClient) { }
   
     register(data: any) {
