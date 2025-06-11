@@ -36,12 +36,7 @@
             "assets": [
               {
                 "glob": "**/*",
-                "input": "public",
-                  {
-    "input": "src",
-    "output": "/",
-    "glob": "_redirects"
-  }
+                "input": "public"
               }
             ],
             "styles": [
