@@ -23,7 +23,7 @@ export interface Patient {
   providedIn: 'root'
 })
 export class ApiDataService {
-  urlServe = "http://localhost:5000";
+  urlServe = "https://backend-project-m79o.onrender.com";
   constructor(private http: HttpClient) { }
 
   sendData(path:string,data:any):Observable<any>{
